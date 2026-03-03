@@ -56,11 +56,25 @@
     };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
+        PASS1: PASS1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(R) &kp D &kp N8 &kp N9 &kp NUMBER_2 &kp NUMBER_2 &kp N8 &kp N0>;
+            label = "PASS1";
+        };
+
+        PASS2: PASS2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(T) &kp Y &kp N8 &kp N9 &kp NUMBER_2 &kp NUMBER_2 &kp N8 &kp N0>;
+            label = "PASS2";
+        };
+
+        ID: ID {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(Z) &kp NUMBER_2 &kp NUMBER_6 &kp NUMBER_1 &kp N7 &kp N5 &kp N7>;
+            label = "ID";
         };
     };
 
@@ -109,10 +123,10 @@
 
         BLUETOOTH {
             bindings = <
-&trans  &bt BT_CLR  &bt BT_CLR_ALL  &trans  &trans                         &bt BT_SEL 0   &bt BT_SEL 1           &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans      &trans          &trans  &trans  &trans      &trans     &kp PERCENT    &kp LEFT_PARENTHESIS   &trans        &trans        &trans
-&trans  &none       &none           &none   &trans  &trans      &none      &kp AMPERSAND  &kp RIGHT_PARENTHESIS  &trans        &trans        &none
-&trans  &trans      &trans          &trans  &trans  &trans      &kp EQUAL  &kp DOLLAR                                                        &none
+&trans  &bt BT_CLR  &bt BT_CLR_ALL  &trans  &trans                         &bt BT_SEL 0   &bt BT_SEL 1           &bt BT_SEL 2   &bt BT_SEL 3        &bt BT_SEL 4
+&trans  &trans      &trans          &trans  &trans  &trans      &trans     &kp PERCENT    &kp LEFT_PARENTHESIS   &kp LS(LG(S))  &kp LA(LC(DELETE))  &trans
+&trans  &none       &none           &none   &trans  &trans      &none      &kp AMPERSAND  &kp RIGHT_PARENTHESIS  &trans         &trans              &none
+&trans  &trans      &trans          &PASS1  &PASS2  &ID         &kp EQUAL  &kp DOLLAR                                                               &none
             >;
         };
     };
