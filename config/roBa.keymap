@@ -100,15 +100,15 @@
 &kp LCTRL  &mt LG(D) LEFT_WIN  &mt LS(CAPSLOCK) CAPSLOCK  &kp LEFT_SHIFT  &lt 1 SPACE  &kp ESCAPE      &mt AT_SIGN MINUS  &kp ENTER                             &mt EXCL QUESTION
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
         };
 
         NUMBER {
             bindings = <
-&kp F4     &trans        &trans     &kp LEFT_ARROW  &kp RIGHT_ARROW                          &kp LS(ASTRK)  &kp N7  &kp N8  &kp N9  &kp PLUS
-&kp F10    &kp LEFT_ALT  &kp ENTER  &kp UP_ARROW    &kp DELETE       &trans       &trans     &kp FSLH       &kp N4  &kp N5  &kp N6  &kp MINUS
-&kp F11    &trans        &trans     &kp DOWN_ARROW  &kp BACKSPACE    &trans       &kp EQUAL  &kp N0         &kp N1  &kp N2  &kp N3  &kp BACKSPACE
-&kp LCTRL  &trans        &trans     &trans          &kp SPACE        &kp ESC      &kp TAB    &kp ENTER                              &kp SEMI
+&kp F4     &trans        &trans     &kp LEFT  &kp RIGHT                              &kp LS(N8)  &kp N7  &kp N8  &kp N9  &kp PLUS
+&kp F10    &kp LEFT_ALT  &kp ENTER  &kp UP    &kp DELETE     &trans       &trans     &kp FSLH    &kp N4  &kp N5  &kp N6  &kp MINUS
+&kp F11    &trans        &trans     &kp DOWN  &kp BACKSPACE  &trans       &kp EQUAL  &kp N0      &kp N1  &kp N2  &kp N3  &kp BACKSPACE
+&kp LCTRL  &trans        &trans     &trans    &kp SPACE      &kp ESC      &kp TAB    &kp ENTER                           &kp SEMI
             >;
         };
 
